@@ -38,6 +38,20 @@ python setup.py build develop --user
 
 5. Los modelos entrenados de los ficheros de configuración de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW).
 
+### Prueba rápida
+Si queremos hacer una prueba rápida para comprobar los resultados del programa, podemos usar la siguiente imagen:
+<div align="center">
+    <img src="try_me.jpg", width="400">
+</div>
+
+Para ello usamos el siguiente comando, el cual utiliza el modelo con arquitectura **FastPose + DUC (Shuffle)** que puede obtenerse en el paso 5 del apartado de preparación:
+```python3 ./scripts/test.py --save_img --detbatch 1 --posebatch 30 --cfg ./configs/exp1/fastpose_duc_shuffle.yaml --checkpoint fastpose_duc_shuffle.pth --image try_me.jpg```
+
+El resultado debería ser el siguiente:
+<div align="center">
+    <img src="docs/try_me_pose.jpg", width="400">
+</div>
+
 ## Cómo entrenar
 ```python3 ./scripts/train.py --cfg fichero_configuracion --exp-id identificador_entrenamiento```
 
