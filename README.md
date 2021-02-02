@@ -54,5 +54,5 @@ Las imágenes se guardan por defecto en ```/examples/res/vis```. Para cambiar el
 
 Los vídeos se guardan por defecto en ```/examples/res```. Para cambiar el directorio, se usa el parámeto ```--outdir directory```.
 
-## Testear desde fichero JSON
+## Visualizar pose desde fichero JSON
 ```python3 ./scripts/test.py --cfg fichero_configuracion --checkpoint modelo --save_img --detbatch 1 --posebatch 30 --image archivo_imagen --json archivo_json```
