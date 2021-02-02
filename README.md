@@ -39,20 +39,20 @@ python setup.py build develop --user
 5. Los modelos entrenados de los ficheros de configuración de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW).
 
 ## Cómo entrenar
-```python3 ./scripts/train.py --cfg path_to_config_file --exp-id training_identifier```
+```python3 ./scripts/train.py --cfg fichero_configuracion --exp-id identificador_entrenamiento```
 
 ## Cómo validar
-```python3 ./scripts/validate.py --cfg fichero_configuracion--checkpoint modelo --gpus gpus_a_usar --batch 20```
+```python3 ./scripts/validate.py --cfg fichero_configuracion --checkpoint modelo --gpus gpus_a_usar --batch 20```
 
 ## Cómo testear imágenes
-```python3 ./scripts/demo_inference.py --cfg path_to_config_file --checkpoint path_to_checkpoint --save_img --detbatch 1 --posebatch 30 --image path_to_image```
+```python3 ./scripts/test.py --cfg fichero_configuracion --checkpoint modelo --save_img --detbatch 1 --posebatch 30 --image archivo_imagen```
 
 Las imágenes se guardan por defecto en ```/examples/res/vis```. Para cambiar el directorio, se usa el parámeto ```--outdir directory```.
 
 ## Cómo testear vídeos
-```python3 ./scripts/demo_inference.py --cfg path_to_config_file --checkpoint path_to_checkpoint --save_video --detbatch 1 --posebatch 30 --video path_to_video```
+```python3 ./scripts/test.py --cfg fichero_configuracion --checkpoint modelo --save_video --detbatch 1 --posebatch 30 --video archivo_video```
 
 Los vídeos se guardan por defecto en ```/examples/res```. Para cambiar el directorio, se usa el parámeto ```--outdir directory```.
 
 ## Testear desde fichero JSON
-```python3 ./scripts/demo_inference.py --cfg path_to_config_file --checkpoint path_to_checkpoint --save_img --detbatch 1 --posebatch 30 --image path_to_image --json path_to_json```
+```python3 ./scripts/test.py --cfg fichero_configuracion --checkpoint modelo --save_img --detbatch 1 --posebatch 30 --image archivo_imagen --json archivo_json```
