@@ -15,7 +15,7 @@ LegPoseDetector añade las siguientes características:
 # 1. Instalar PyTorch
 pip3 install torch==1.1.0 torchvision==0.3.0
 
-# 2. Obtener AlphaPose
+# 2. Obtener el proyecto
 git clone https://github.com/enaes05/LegPoseDetector.git
 cd LegPoseDetector
 
