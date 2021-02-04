@@ -12,18 +12,24 @@ LegPoseDetector añade las siguientes características:
 
 ## Instalación
 ```shell
-# 1. Instalar PyTorch
+# 1. Actualizar pip  
+pip install --upgrade pip
+
+# 2. Instalar PyTorch  
 pip3 install torch==1.1.0 torchvision==0.3.0
 
-# 2. Obtener el proyecto
+# 3. Obtener el proyecto
 git clone https://github.com/enaes05/LegPoseDetector.git
 cd LegPoseDetector
 
-# 3. Instalar
+# 4. Configurar path de CUDA  
 export PATH=/usr/local/cuda/bin/:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+
+# 5. Instalar dependencias  
 pip install cython
 sudo apt-get install libyaml-dev
+pip install -r requirements.txt
 python setup.py build develop --user
 ```
 
@@ -34,9 +40,7 @@ python setup.py build develop --user
 
 3. Se debe descargar la base de datos de imágenes con sus respectivas anotaciones desde [COCO](https://cocodataset.org/#download).
 
-4. Se pueden descargar modelos ya entrenados. Para ello se puede consultar la documentación original de AlphaPose, en https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/MODEL_ZOO.md
-
-5. Los modelos entrenados de los ficheros de configuración de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW).
+4. Los modelos entrenados de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW). Los ficheros de configuración correspondientes están el subdirectorio `configs`.
 
 ### Prueba rápida
 Si queremos hacer una prueba rápida para comprobar los resultados del programa, podemos usar la siguiente imagen:
