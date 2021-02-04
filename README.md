@@ -12,6 +12,10 @@ LegPoseDetector añade las siguientes características:
 
 ## Instalación
 ```shell
+# 0. Crear directorio virtual (opcional)
+python3 -m venv directorio_virtual
+source directorio_virtual/bin/activate
+
 # 1. Actualizar pip  
 pip install --upgrade pip
 
@@ -41,6 +45,14 @@ python setup.py build develop --user
 3. Se debe descargar la base de datos de imágenes con sus respectivas anotaciones desde [COCO](https://cocodataset.org/#download).
 
 4. Los modelos entrenados de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW). Los ficheros de configuración correspondientes están el subdirectorio `configs`.
+
+ Modelo | Fichero de configuración 
+
+ --- | --- 
+
+ fastpose_dcn.pth | fastpose_dcn.yaml 
+
+ fastpose_duc_shuffle.pth | fastpose_duc_shuffle.yaml 
 
 ### Prueba rápida
 Si queremos hacer una prueba rápida para comprobar los resultados del programa, podemos usar la siguiente imagen:
