@@ -44,18 +44,22 @@ python setup.py build develop --user
 
 3. Se debe descargar la base de datos de imágenes con sus respectivas anotaciones desde [COCO](https://cocodataset.org/#download).
 
-4. Los modelos entrenados de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW). Los ficheros de configuración correspondientes están el subdirectorio `configs`.
+4. Los modelos entrenados de este proyecto se pueden descargar desde [Google Drive](https://drive.google.com/drive/folders/1B5gfKdPzo0XrU35iDIe9_Ph16_OVX-PW). Los modelos pueden guardarse en cualquier carpeta, ya que al usarlos luego se selecciona su ubicación. Al realizar ejecuciones de test, cada modelo debe usarse junto al fichero de configuración con el que se ha entrenado. Dichos ficheros de configuración están el subdirectorio `configs`, y se usan los siguientes para los modelos que se ofrecen:
 
  Modelo | Fichero de configuración 
-
  --- | --- 
-
  fastpose_dcn.pth | fastpose_dcn.yaml 
-
  fastpose_duc_shuffle.pth | fastpose_duc_shuffle.yaml 
+ 
+ Para cada modelo se exponen también sus métricas, para consultar sus parámetros se pueden observar sus respectivos ficheros de configuración:
+ 
+ Modelo | MSE (Loss) | Accuracy | mAP (GT) | mAP (RCNN)
+ --- | --- | --- | --- | ---
+ fastpose_dcn.pth | 0.000487 | 0.7939 | 0.5950 | 0.6899
+ fastpose_duc_shuffle.pth | 0.000469 | 0.8122 | 0.5960 | 0.6873
 
 ### Prueba rápida
-Si queremos hacer una prueba rápida para comprobar los resultados del programa, podemos usar la siguiente imagen:
+Si queremos hacer una prueba rápida para comprobar los resultados del programa al estimar la pose, podemos usar la siguiente imagen:
 <div align="center">
     <img src="try_me.jpg", width="400">
 </div>
@@ -64,7 +68,7 @@ Se utilizará el modelo con arquitectura **FastPose + DUC (Shuffle)**, que puede
 
 ```python3 ./scripts/test.py --save_img --detbatch 1 --posebatch 30 --cfg ./configs/exp1/fastpose_duc_shuffle.yaml --checkpoint fastpose_duc_shuffle.pth --image try_me.jpg```
 
-El resultado debería ser el siguiente:
+El resultado debería ser el siguiente, se guarda por defecto en el directorio ```/examples/res/vis```:
 <div align="center">
     <img src="docs/try_me_pose.jpg", width="400">
 </div>
