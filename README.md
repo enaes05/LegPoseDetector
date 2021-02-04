@@ -48,7 +48,7 @@ Si queremos hacer una prueba rápida para comprobar los resultados del programa,
     <img src="try_me.jpg", width="400">
 </div>
 
-Se utilizará el modelo con arquitectura **FastPose + DUC (Shuffle)**, que puede obtenerse en el paso 5 del apartado de **Preparación**. El comando sería el siguiente:
+Se utilizará el modelo con arquitectura **FastPose + DUC (Shuffle)**, que puede obtenerse en el paso 4 del apartado de **Preparación**. El comando sería el siguiente:
 
 ```python3 ./scripts/test.py --save_img --detbatch 1 --posebatch 30 --cfg ./configs/exp1/fastpose_duc_shuffle.yaml --checkpoint fastpose_duc_shuffle.pth --image try_me.jpg```
 
