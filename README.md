@@ -35,6 +35,8 @@ pip install cython
 sudo apt-get install libyaml-dev
 pip install -r requirements.txt
 python setup.py build develop --user
+# La opción --user podría no funcionar, en ese caso
+# usar el mismo comando sin dicha opción
 ```
 
 ### Preparación
