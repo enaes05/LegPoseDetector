@@ -1,3 +1,7 @@
+# -----------------------------------------------------
+# Modified by Enrique Arroyo, February 2021
+# -----------------------------------------------------
+
 """Script for single-gpu/multi-gpu demo."""
 import argparse
 import os
