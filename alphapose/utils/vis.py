@@ -1,3 +1,7 @@
+# -----------------------------------------------------
+# Modified by Enrique Arroyo, February 2021
+# -----------------------------------------------------
+
 import math
 import time
 from json import loads
