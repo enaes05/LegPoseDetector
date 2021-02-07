@@ -1,6 +1,5 @@
 # -----------------------------------------------------
-# Copyright (c) Shanghai Jiao Tong University. All rights reserved.
-# Written by Jiefeng Li (jeff.lee.sjtu@gmail.com)
+# Modified by Enrique Arroyo, February 2021
 # -----------------------------------------------------
 
 """MS COCO Human keypoint dataset."""
