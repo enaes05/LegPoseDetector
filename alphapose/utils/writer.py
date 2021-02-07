@@ -1,3 +1,7 @@
+# -----------------------------------------------------
+# Modified by Enrique Arroyo, February 2021
+# -----------------------------------------------------
+
 import os
 import time
 from threading import Thread
